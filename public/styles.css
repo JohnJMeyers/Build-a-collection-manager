@@ -1,0 +1,33 @@
+.home-games {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  border: 1px solid tan;
+  text-align: center;
+  margin: 2%;
+  background-color: lightgrey;
+  border-radius: 4px;
+}
+.edit {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+.create-inputs {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+.image-div {
+  cursor: pointer;
+}
+img {
+  width: 200px;
+  height: 200px;
+}
+.home {
+  margin: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

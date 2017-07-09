@@ -1,0 +1,28 @@
+<h1>Please select a game to delete</h1>
+<section class='home'>
+  {{#games}}
+
+    <div class="home-games">
+
+      <div class="">
+        <!-- <a href="/edit/{{id}}">{{title}}</a> -->
+        <h1>{{title}}</h1>
+      </div>
+
+      <div class="image-div">
+        <!-- <a href="/edit/{{id}}"><img class'image' src='{{image}}' alt=""></a> -->
+        <img class'image' src='{{image}}' alt="">
+      </div>
+
+      <div class="">
+        <p>release date:</p>
+        <h3>{{release}}</h3>
+      </div>
+      <form class="" action="/delete" method="post">
+           <button type="submit" value="{{id}}" name="delete">delete</button>
+      </form>
+
+    </div>
+  {{/games}}
+
+</section>
