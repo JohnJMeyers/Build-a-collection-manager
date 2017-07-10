@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const router = express.Router()
-const Game = require('../games.js')
+const Game = require('../models/games')
 
 router.get('/create', function(req, res){
   return res.render('create')
@@ -14,7 +14,6 @@ console.log(req.body.platform)
     title: req.body.title,
     image: req.body.image,
     release: req.body.release,
-    // platform: {xbox: req.body.platform}
   })
     game.save().then(function(game){
     console.log('game has been saved')
@@ -22,8 +21,6 @@ console.log(req.body.platform)
   }).catch(function(err){
     console.log('There was an error!')
   })
-
 })
-
 
 module.exports = router

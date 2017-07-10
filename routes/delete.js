@@ -1,12 +1,11 @@
 const express = require('express')
 const app = express()
 const router = express.Router()
-const Game = require('../games')
+const Game = require('../models/games')
 
 router.get('/delete', function(req, res){
   Game.find()
   .then(function(games){
-    console.log(games)
     res.render('delete', {
       games: games
     })
@@ -16,7 +15,6 @@ router.get('/delete', function(req, res){
 })
 
 router.post('/delete', function(req, res){
-  console.log('&&&' + req.body.delete + '&&&')
   Game.deleteOne({_id: req.body.delete})
   .then(function(){
     return res.redirect('/delete')
@@ -25,8 +23,6 @@ router.post('/delete', function(req, res){
   })
 
 })
-
-
 
 
 module.exports = router
